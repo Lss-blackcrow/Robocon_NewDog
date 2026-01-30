@@ -10,7 +10,7 @@ void Jump(Position_HandleTypeDef * hposition )
 		float X1, Y1, sigma;
 		t=t + g_gait_config.freq;
 		 if (t >= g_gait_config.T) {
-        t = 0.0f; // 超过完整周期后重置
+        t = 0.0f; // 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟节猴拷锟斤拷锟斤拷
     }
 	  sigma = 2.0f * pi * t / (0.5f * g_gait_config.T);
     if(t<=g_gait_config.T/2.0f)
@@ -25,7 +25,7 @@ void Jump(Position_HandleTypeDef * hposition )
 			X1 = g_gait_config.stride/2.0f - g_gait_config.stride * ((sigma - sin(sigma))/ (2.0f * pi));
 			float landing_sigma=sigma-2.0f*pi;
 			Y1 = g_gait_config.maxHeight + (g_gait_config.height / 2.0f) * (1.0f - cos(landing_sigma)) / 2.0f;
-        // 落地后（后半周期后期），锁定支撑高度，避免小幅波动
+        // 锟斤拷睾螅ê锟斤拷锟斤拷锟节猴拷锟节ｏ拷锟斤拷锟斤拷锟斤拷支锟脚高度ｏ拷锟斤拷锟斤拷小锟斤拷锟斤拷锟斤拷
         if (landing_sigma >= pi) {
             Y1 = g_gait_config.maxHeight;
         }
@@ -36,7 +36,7 @@ void Jump(Position_HandleTypeDef * hposition )
 	    
 
 
-
+//
 
 
 	
